@@ -5,7 +5,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 geo:SpatialObject rdfs:subClassOf obo:BFO_0000001 . # entity
-
 geo:Feature owl:equivalentClass [ 
         rdf:type owl:Class ;
         owl:unionOf ( 
@@ -14,14 +13,20 @@ geo:Feature owl:equivalentClass [
                     )
     ] ;
 .
-
 geo:Geometry rdfs:subClassOf obo:BFO_0000031 . # generically dependent continuant
-
 geo:Geometry rdfs:subClassOf cco:ont00000853 . # Descriptive Information Content Entity
 
 geo:hasGeometry rdfs:subPropertyOf cco:ont00001917 . # described by
-
 geo:hasSerialization rdfs:subPropertyOf owl:topDataProperty . 
 
 obo:BFO_0000171 rdfs:subPropertyOf geo:sfWithin . # "located in" has more limited domain and range than sfWithin
+
+cco:ont00001791 rdfs:subPropertyOf geo:rcc8eq . # coincides with, spatially equals
+cco:ont00001931 rdfs:subPropertyOf geo:rcc8ec . # externally connects with, spatially meets
+cco:ont00001797 rdfs:subPropertyOf geo:rcc8po . # partially overlaps with, spatially overlaps
+cco:ont00001909 rdfs:subPropertyOf geo:rcc8tppi . # has tangential part, spatially covers
+cco:ont00001796 rdfs:subPropertyOf geo:rcc8tpp . # tangential part of, spatially covered by
+cco:ont00001989 rdfs:subPropertyOf geo:rcc8ntppi . # has nontangential part, contains
+cco:ont00001827 rdfs:subPropertyOf geo:rcc8ntpp . # nontangential part of, inside
+cco:ont00001838 rdfs:subPropertyOf geo:rcc8dc . # disconnected with, spatially disjoint
 
