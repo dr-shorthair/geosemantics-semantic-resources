@@ -10,6 +10,7 @@ geo:Feature owl:equivalentClass [
         owl:unionOf ( 
             obo:BFO_0000004 # independent continuant
             obo:BFO_0000015 # process
+            obo:BFO_0000035 # process boundary
                     )
     ] ;
 .
@@ -20,6 +21,9 @@ geo:hasGeometry rdfs:subPropertyOf cco:ont00001917 . # described by
 geo:hasSerialization rdfs:subPropertyOf owl:topDataProperty . 
 
 obo:BFO_0000171 rdfs:subPropertyOf geo:sfWithin . # "located in" has more limited domain and range than sfWithin
+obo:BFO_0000066 rdfs:subPropertyOf geo:sfWithin . # "occurs in" has more limited domain and range than sfWithin
+cco:ont00001944 rdfs:subPropertyOf geo:sfWithin . # spatial part of
+cco:ont00001855 rdfs:subPropertyOf geo:sfContains . # has spatial part
 
 cco:ont00001791 rdfs:subPropertyOf geo:rcc8eq . # coincides with, spatially equals
 cco:ont00001931 rdfs:subPropertyOf geo:rcc8ec . # externally connects with, spatially meets
